@@ -1,0 +1,561 @@
+/* ============================================================
+   ESTILOS GENERALES - CLUB 22 (Vinería & Bar)
+   Diseño minimalista funcional: fondo blanco, bordes grises finos,
+   tipografía legible, formularios y tablas HTML limpias.
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+a {
+  color: #111111;
+  text-decoration: underline;
+}
+
+/* Encabezado Principal */
+.app-header {
+  border-bottom: 2px solid #222222;
+  padding: 12px 20px;
+  background-color: #fcfcfc;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.brand-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: #555555;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.user-badge-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.role-tag {
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  padding: 2px 6px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.role-tag.admin {
+  background-color: #e3ebf7;
+  border-color: #9cb4d8;
+  color: #1a365d;
+}
+
+.role-tag.empleado {
+  background-color: #eaf4e8;
+  border-color: #a3cfa0;
+  color: #1c4516;
+}
+
+.local-selector-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.nav-links a {
+  padding: 5px 10px;
+  border: 1px solid #cccccc;
+  background-color: #f7f7f7;
+  text-decoration: none;
+  color: #222222;
+  font-size: 13px;
+}
+
+.nav-links a:hover {
+  background-color: #eaeaea;
+}
+
+.nav-links a.active {
+  background-color: #222222;
+  color: #ffffff;
+  border-color: #222222;
+  font-weight: 600;
+}
+
+/* Layout Principal */
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Alertas y Notificaciones */
+.alert {
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  border: 1px solid;
+  font-size: 13px;
+}
+
+.alert-success {
+  background-color: #eef7ee;
+  border-color: #7bc17e;
+  color: #1e5a20;
+}
+
+.alert-danger {
+  background-color: #fbeeed;
+  border-color: #e28b85;
+  color: #8b1812;
+}
+
+.alert-warning {
+  background-color: #fef8eb;
+  border-color: #f0ca72;
+  color: #835c00;
+}
+
+.alert-info {
+  background-color: #edf5fc;
+  border-color: #8fbfe6;
+  color: #174e79;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid #aaaaaa;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #111111;
+}
+
+/* Botones Comunes */
+button,
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #f0f0f0;
+  border: 1px solid #888888;
+  color: #111111;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #e0e0e0;
+}
+
+button:disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #222222;
+  border-color: #111111;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #444444;
+}
+
+.btn-danger {
+  background-color: #c92a2a;
+  border-color: #a51d24;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #a51d24;
+}
+
+.btn-sm {
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+.btn-danger-outline {
+  background-color: #ffffff;
+  border-color: #c92a2a;
+  color: #c92a2a;
+}
+
+.btn-danger-outline:hover {
+  background-color: #fdf2f2;
+}
+
+/* Tablas HTML */
+.table-responsive {
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  border: 1px solid #cccccc;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #222222;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Badges de Estado */
+.badge {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #cccccc;
+  text-transform: uppercase;
+}
+
+.badge-low-stock {
+  background-color: #ffebee;
+  border-color: #ef9a9a;
+  color: #c62828;
+}
+
+.badge-ok-stock {
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+  color: #2e7d32;
+}
+
+.badge-libre {
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+  color: #1b5e20;
+}
+
+.badge-ocupada {
+  background-color: #fff3e0;
+  border-color: #ffcc80;
+  color: #e65100;
+}
+
+.badge-reservada {
+  background-color: #e3f2fd;
+  border-color: #90caf9;
+  color: #0d47a1;
+}
+
+.badge-pendiente {
+  background-color: #fff8e1;
+  border-color: #ffe082;
+  color: #b78103;
+}
+
+.badge-preparacion {
+  background-color: #e1f5fe;
+  border-color: #81d4fa;
+  color: #0277bd;
+}
+
+.badge-listo {
+  background-color: #e8f5e9;
+  border-color: #a5d6a7;
+  color: #2e7d32;
+}
+
+/* Grillas y Cajas */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid #cccccc;
+  padding: 14px;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.card-metric {
+  border: 1px solid #bbbbbb;
+  padding: 12px;
+  background-color: #fbfbfb;
+}
+
+.metric-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 4px;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.metric-sub {
+  font-size: 12px;
+  color: #777777;
+  margin-top: 2px;
+}
+
+/* Modal Simple */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border: 2px solid #222222;
+  width: 90%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.ticket-receipt {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  border: 1px dashed #666666;
+  padding: 16px;
+  background-color: #fafafa;
+}
+
+.ticket-header {
+  text-align: center;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed #888888;
+  padding-bottom: 8px;
+}
+
+.ticket-footer {
+  text-align: center;
+  margin-top: 14px;
+  border-top: 1px dashed #888888;
+  padding-top: 8px;
+  font-size: 12px;
+}
+
+/* POS Layout */
+.pos-container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+
+.pos-cart-panel {
+  border: 1px solid #222222;
+  padding: 14px;
+  background-color: #fbfbfb;
+}
+
+.pos-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 0;
+  border-top: 2px solid #222222;
+  margin-top: 8px;
+}
+
+/* Cocina Columnas */
+.cocina-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.cocina-col {
+  border: 1px solid #bbbbbb;
+  background-color: #fdfdfd;
+  min-height: 400px;
+}
+
+.cocina-col-header {
+  padding: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid #bbbbbb;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cocina-card {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Mesas Grilla */
+.mesas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.mesa-box {
+  border: 2px solid #cccccc;
+  padding: 12px;
+  text-align: center;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.mesa-box.libre {
+  border-color: #81c784;
+}
+
+.mesa-box.ocupada {
+  border-color: #ffb74d;
+  background-color: #fffbf5;
+}
+
+.mesa-box.reservada {
+  border-color: #64b5f6;
+  background-color: #f5faff;
+}
+
+.mesa-box:hover {
+  box-shadow: inset 0 0 0 1px #222222;
+}
+
+/* Responsive mínimo para notebook */
+@media (max-width: 900px) {
+  .pos-container,
+  .grid-2,
+  .cocina-grid,
+  .mesas-grid {
+    grid-template-columns: 1fr;
+  }
+}
